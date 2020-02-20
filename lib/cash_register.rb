@@ -9,6 +9,8 @@ class CashRegister
   
   def add_item(title, price, amount=1)
     @total += price*amount
+    @transactions = []
+    
     @last_transaction = price * amount
     amount.times do
       @items << title
